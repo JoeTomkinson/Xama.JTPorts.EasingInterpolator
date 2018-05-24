@@ -17,6 +17,16 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <PackageId>Xama.JTPorts.EasingInterpolator</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Description>Xamarin Android EasingInterpolator Ported from Java library to provide 28 different easing animations.</Description>
+    <Authors>Joe Tomkinson</Authors>
+    <Title>Xama.JTPorts.EasingInterpolator</Title>
+    <Owners>Joe Tomkinson</Owners>
+    <Copyright>Joe Tomkinson</Copyright>
+    <PackageProjectUrl>https://github.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator/blob/master/images/easinginterpolatoricon.png%3fraw=true</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +65,9 @@
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
   </ItemGroup>
   <ItemGroup>
