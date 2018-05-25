@@ -2,4 +2,6 @@
 
 - [ ] Fill out readme.md a bit better.
 
-- [ ] Create the nuget package.
+- [x] Create the v1 nuget package.
+
+- [ ] Convert to Camel case where appropriate.
