@@ -18,7 +18,7 @@
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <PackageId>Xama.JTPorts.EasingInterpolator</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Description>Xamarin Android EasingInterpolator Ported from Java library to provide 28 different easing animations.</Description>
     <Authors>Joe Tomkinson</Authors>
     <Title>Xama.JTPorts.EasingInterpolator</Title>
@@ -30,6 +30,7 @@
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <IsDevelopmentDependency>False</IsDevelopmentDependency>
+    <PackageReleaseNotes>Adjusted some access modifiers to fix an internal issue.</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

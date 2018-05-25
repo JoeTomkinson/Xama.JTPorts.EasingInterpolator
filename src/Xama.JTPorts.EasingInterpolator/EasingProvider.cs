@@ -2,10 +2,9 @@
 
 namespace Xama.JTPorts.EasingInterpolator
 {
-    class EasingProvider
+    public class EasingProvider
     {
-
-        public static float get(Ease ease, float elapsedTimeRate)
+        public static float Get(Ease ease, float elapsedTimeRate)
         {
             switch (ease)
             {
@@ -14,27 +13,27 @@ namespace Xama.JTPorts.EasingInterpolator
                 case Ease.QuadIn:
                     return getPowIn(elapsedTimeRate, 2);
                 case Ease.QuadOut:
-                    return getPowOut(elapsedTimeRate, 2);
+                    return GetPowOut(elapsedTimeRate, 2);
                 case Ease.QuadInOut:
-                    return getPowInOut(elapsedTimeRate, 2);
+                    return GetPowInOut(elapsedTimeRate, 2);
                 case Ease.CubicIn:
                     return getPowIn(elapsedTimeRate, 3);
                 case Ease.CubicOut:
-                    return getPowOut(elapsedTimeRate, 3);
+                    return GetPowOut(elapsedTimeRate, 3);
                 case Ease.CubicInOut:
-                    return getPowInOut(elapsedTimeRate, 3);
+                    return GetPowInOut(elapsedTimeRate, 3);
                 case Ease.QuartIn:
                     return getPowIn(elapsedTimeRate, 4);
                 case Ease.QuartOut:
-                    return getPowOut(elapsedTimeRate, 4);
+                    return GetPowOut(elapsedTimeRate, 4);
                 case Ease.QuartInOut:
-                    return getPowInOut(elapsedTimeRate, 4);
+                    return GetPowInOut(elapsedTimeRate, 4);
                 case Ease.QuintIn:
                     return getPowIn(elapsedTimeRate, 5);
                 case Ease.QuintOut:
-                    return getPowOut(elapsedTimeRate, 5);
+                    return GetPowOut(elapsedTimeRate, 5);
                 case Ease.QuintInOut:
-                    return getPowInOut(elapsedTimeRate, 5);
+                    return GetPowInOut(elapsedTimeRate, 5);
                 case Ease.SineIn:
                     return (float)(1f - Math.Cos(elapsedTimeRate * Math.PI / 2f));
                 case Ease.SineOut:
@@ -46,7 +45,7 @@ namespace Xama.JTPorts.EasingInterpolator
                 case Ease.BackOut:
                     return (float)(--elapsedTimeRate * elapsedTimeRate * ((1.7 + 1f) * elapsedTimeRate + 1.7) + 1f);
                 case Ease.BackInOut:
-                    return getBackInOut(elapsedTimeRate, 1.7f);
+                    return GetBackInOut(elapsedTimeRate, 1.7f);
                 case Ease.CircIn:
                     return (float)-(Math.Sqrt(1f - elapsedTimeRate * elapsedTimeRate) - 1);
                 case Ease.CircOut:
@@ -58,23 +57,23 @@ namespace Xama.JTPorts.EasingInterpolator
                     }
                     return (float)(0.5f * (Math.Sqrt(1f - (elapsedTimeRate -= 2f) * elapsedTimeRate) + 1f));
                 case Ease.BounceIn:
-                    return getBounceIn(elapsedTimeRate);
+                    return GetBounceIn(elapsedTimeRate);
                 case Ease.BounceOut:
-                    return getBounceOut(elapsedTimeRate);
+                    return GetBounceOut(elapsedTimeRate);
                 case Ease.BounceInOut:
                     if (elapsedTimeRate < 0.5f)
                     {
-                        return getBounceIn(elapsedTimeRate * 2f) * 0.5f;
+                        return GetBounceIn(elapsedTimeRate * 2f) * 0.5f;
                     }
-                    return getBounceOut(elapsedTimeRate * 2f - 1f) * 0.5f + 0.5f;
+                    return GetBounceOut(elapsedTimeRate * 2f - 1f) * 0.5f + 0.5f;
                 case Ease.ElasticIn:
-                    return getElasticIn(elapsedTimeRate, 1, 0.3);
+                    return GetElasticIn(elapsedTimeRate, 1, 0.3);
 
                 case Ease.ElasticOut:
-                    return getElasticOut(elapsedTimeRate, 1, 0.3);
+                    return GetElasticOut(elapsedTimeRate, 1, 0.3);
 
                 case Ease.ElasticInOut:
-                    return getElasticInOut(elapsedTimeRate, 1, 0.45);
+                    return GetElasticInOut(elapsedTimeRate, 1, 0.45);
 
                 default:
                     return elapsedTimeRate;
@@ -92,22 +91,24 @@ namespace Xama.JTPorts.EasingInterpolator
             return (float)Math.Pow(elapsedTimeRate, pow);
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @param pow             pow The exponent to use (ex. 3 would return a cubic ease).
- * @return easedValue
- */
-        private static float getPowOut(float elapsedTimeRate, double pow)
+        /// <summary>
+        /// Returns eased value.
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <param name="pow"></param>
+        /// <returns></returns>
+        private static float GetPowOut(float elapsedTimeRate, double pow)
         {
             return (float)((float)1 - Math.Pow(1 - elapsedTimeRate, pow));
         }
 
-        /**
-  * @param elapsedTimeRate Elapsed time / Total time
-  * @param pow             pow The exponent to use (ex. 3 would return a cubic ease).
-  * @return easedValue
-  */
-        private static float getPowInOut(float elapsedTimeRate, double pow)
+        /// <summary>
+        /// Gets eased value
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <param name="pow"></param>
+        /// <returns></returns>
+        private static float GetPowInOut(float elapsedTimeRate, double pow)
         {
             if ((elapsedTimeRate *= 2) < 1)
             {
@@ -117,12 +118,13 @@ namespace Xama.JTPorts.EasingInterpolator
             return (float)(1 - 0.5 * Math.Abs(Math.Pow(2 - elapsedTimeRate, pow)));
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @param amount          amount The strength of the ease.
- * @return easedValue
- */
-        private static float getBackInOut(float elapsedTimeRate, double amount)
+        /// <summary>
+        /// Get eased value from Elapsed time / Total time and the amount The strength of the ease.
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        private static float GetBackInOut(float elapsedTimeRate, double amount)
         {
             amount *= 1.525;
             if ((elapsedTimeRate *= 2) < 1)
@@ -132,20 +134,22 @@ namespace Xama.JTPorts.EasingInterpolator
             return (float)(0.5 * ((elapsedTimeRate -= 2) * elapsedTimeRate * ((amount + 1) * elapsedTimeRate + amount) + 2));
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @return easedValue
- */
-        private static float getBounceIn(float elapsedTimeRate)
+        /// <summary>
+        /// Bounce in ease value from Elapsed time / Total time
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <returns></returns>
+        private static float GetBounceIn(float elapsedTimeRate)
         {
-            return 1f - getBounceOut(1f - elapsedTimeRate);
+            return 1f - GetBounceOut(1f - elapsedTimeRate);
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @return easedValue
- */
-        private static float getBounceOut(double elapsedTimeRate)
+        /// <summary>
+        /// Bounce out ease value.
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <returns></returns>
+        private static float GetBounceOut(double elapsedTimeRate)
         {
             if (elapsedTimeRate < 1 / 2.75)
             {
@@ -165,13 +169,14 @@ namespace Xama.JTPorts.EasingInterpolator
             }
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @param amplitude       Amplitude of easing
- * @param period          Animation of period
- * @return easedValue
- */
-        private static float getElasticIn(float elapsedTimeRate, double amplitude, double period)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <param name="amplitude"></param>
+        /// <param name="period"></param>
+        /// <returns></returns>
+        private static float GetElasticIn(float elapsedTimeRate, double amplitude, double period)
         {
             if (elapsedTimeRate == 0 || elapsedTimeRate == 1) return elapsedTimeRate;
             double pi2 = Math.PI * 2;
@@ -179,13 +184,14 @@ namespace Xama.JTPorts.EasingInterpolator
             return (float)-(amplitude * Math.Pow(2f, 10f * (elapsedTimeRate -= 1f)) * Math.Sin((elapsedTimeRate - s) * pi2 / period));
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @param amplitude       Amplitude of easing
- * @param period          Animation of period
- * @return easedValue
- */
-        private static float getElasticOut(float elapsedTimeRate, double amplitude, double period)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <param name="amplitude"></param>
+        /// <param name="period"></param>
+        /// <returns></returns>
+        private static float GetElasticOut(float elapsedTimeRate, double amplitude, double period)
         {
             if (elapsedTimeRate == 0 || elapsedTimeRate == 1) return elapsedTimeRate;
 
@@ -194,13 +200,14 @@ namespace Xama.JTPorts.EasingInterpolator
             return (float)(amplitude * Math.Pow(2, -10 * elapsedTimeRate) * Math.Sin((elapsedTimeRate - s) * pi2 / period) + 1);
         }
 
-        /**
- * @param elapsedTimeRate Elapsed time / Total time
- * @param amplitude       Amplitude of easing
- * @param period          Animation of period
- * @return easedValue
- */
-        private static float getElasticInOut(float elapsedTimeRate, double amplitude, double period)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="elapsedTimeRate"></param>
+        /// <param name="amplitude"></param>
+        /// <param name="period"></param>
+        /// <returns></returns>
+        private static float GetElasticInOut(float elapsedTimeRate, double amplitude, double period)
         {
             double pi2 = Math.PI * 2;
 
@@ -212,6 +219,5 @@ namespace Xama.JTPorts.EasingInterpolator
             return (float)(amplitude * Math.Pow(2, -10 * (elapsedTimeRate -= 1)) * Math.Sin((elapsedTimeRate - s) * pi2 / period) * 0.5 + 1);
 
         }
-
     }
 }
