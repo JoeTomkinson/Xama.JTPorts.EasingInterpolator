@@ -4,4 +4,4 @@
 
 - [x] Create the v1 nuget package.
 
-- [ ] Convert to Camel case where appropriate.
+- [x] Convert to Camel case where appropriate.
