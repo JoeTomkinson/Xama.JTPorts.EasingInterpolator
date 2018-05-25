@@ -6,7 +6,7 @@ namespace Xama.JTPorts.EasingInterpolator
     /// The Easing class provides a collection of ease functions. It does not use the standard 4 param
     /// ease signature.Instead it uses a single param which indicates the current linear ratio(0 to 1) of the tween.
     /// </summary>
-    class EasingInterpolator : Java.Lang.Object, ITimeInterpolator
+    public class EasingInterpolator : Java.Lang.Object, ITimeInterpolator
     {
         private Ease ease;
 
@@ -22,7 +22,7 @@ namespace Xama.JTPorts.EasingInterpolator
 
         public float GetInterpolation(float input)
         {
-            return EasingProvider.get(this.ease, input);
+            return EasingProvider.Get(this.ease, input);
         }
     }
 }
