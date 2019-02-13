@@ -12,6 +12,18 @@ _Xamarin.Android_ Native EasingInterpolator Twenty-eight different easing animat
 
 This is a ported build, converted from Java to C# for use with the Xamarin MonoFramework.
 
+# Usage
+
+```cs
+ValueAnimator valueAnimator = new ValueAnimator();
+valueAnimator.SetInterpolator(new EasingInterpolator(Ease.CUBIC_IN));
+valueAnimator.Start();
+
+ObjectAnimator animator = ObjectAnimator.ofFloat(View, "translationY", 0, 300);
+animator.SetInterpolator(new EasingInterpolator(Ease.ELASTIC_IN_OUT)));
+animator.Start();
+```
+
 # Useful?
 <br />
 <a href="https://www.buymeacoffee.com/digitalsa1nt" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
