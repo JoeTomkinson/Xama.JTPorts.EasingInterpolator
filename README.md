@@ -6,7 +6,7 @@
 ![Build: Passing](https://img.shields.io/badge/Build-Passing-green.svg)
 [![NuGet](https://img.shields.io/nuget/v/Xama.JTPorts.EasingInterpolator.svg?label=NuGet)](https://www.nuget.org/packages/Xama.JTPorts.EasingInterpolator)
 
-[Xama.JTPorts.EasingInterpolator]
+### Namespace: Xama.JTPorts.EasingInterpolator
 
 _Xamarin.Android_ Native EasingInterpolator Twenty-eight different easing animation interpolators for Android. ported from [EasingInterpolator](https://github.com/MasayukiSuda/EasingInterpolator) by [Masayuki Suda](https://github.com/MasayukiSuda)
 
