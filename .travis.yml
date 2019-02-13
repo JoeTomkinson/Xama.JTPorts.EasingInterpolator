@@ -1,6 +1,8 @@
 language: csharp
 solution: src/Xama.JTPorts.EasingInterpolator.sln
+script:
+  nuget # lets get version number
+  - nuget restore src/Xama.JTPorts.EasingInterpolator.sln -Verbosity detailed
+  - nuget update src/Xama.JTPorts.EasingInterpolator.sln -Verbosity detailed
 mono:
   - latest
-  - 3.12.0
-  - 3.10.0
