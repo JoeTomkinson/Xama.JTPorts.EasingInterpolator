@@ -11,3 +11,9 @@
 _Xamarin.Android_ Native EasingInterpolator Twenty-eight different easing animation interpolators for Android. ported from [EasingInterpolator](https://github.com/MasayukiSuda/EasingInterpolator) by [Masayuki Suda](https://github.com/MasayukiSuda)
 
 This is a ported build, converted from Java to C# for use with the Xamarin MonoFramework.
+
+# Useful?
+<br />
+<a href="https://www.buymeacoffee.com/digitalsa1nt" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
+ _You know, only if you want to_
