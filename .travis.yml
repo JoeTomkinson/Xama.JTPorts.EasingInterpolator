@@ -1,1 +1,2 @@
-language: cs
+language: csharp
+solution: Xama.JTPorts.EasingInterpolator.sln
