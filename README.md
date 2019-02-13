@@ -24,7 +24,7 @@ animator.SetInterpolator(new EasingInterpolator(Ease.ELASTIC_IN_OUT)));
 animator.Start();
 ```
 
-![Image of easing types](https://github.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator/blob/master/images/easing.png?raw=true)
+![Image of easing types](https://github.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator/blob/master/images/easingdiagram.png?raw=true)
 
 # Useful?
 <br />
