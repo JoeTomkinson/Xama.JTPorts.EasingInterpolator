@@ -16,12 +16,12 @@ This is a ported build, converted from Java to C# for use with the Xamarin MonoF
 
 ```cs
 ValueAnimator valueAnimator = new ValueAnimator();
-valueAnimator.SetInterpolator(new EasingInterpolator(Ease.CUBIC_IN));
+valueAnimator.SetInterpolator(new EasingInterpolator(Ease.CubicIn));
 valueAnimator.Start();
 
-ObjectAnimator animator = ObjectAnimator.ofFloat(View, "translationY", 0, 300);
-animator.SetInterpolator(new EasingInterpolator(Ease.ELASTIC_IN_OUT)));
-animator.Start();
+ObjectAnimator objectAnimator = ObjectAnimator.OfFloat(View, "translationY", 0, 300);
+objectAnimator.SetInterpolator(new EasingInterpolator(Ease.ElasticInOut)));
+objectAnimator.Start();
 ```
 
 ![Image of easing types](https://github.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator/blob/master/images/easingdiagram.png?raw=true)
