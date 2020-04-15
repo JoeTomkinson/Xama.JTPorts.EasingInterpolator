@@ -15,7 +15,7 @@ namespace Xama.JTPorts.EasingInterpolator
             this.ease = ease;
         }
 
-        public Ease getEase()
+        public Ease GetEase()
         {
             return ease;
         }
