@@ -12,6 +12,17 @@ _Xamarin.Android_ Native EasingInterpolator Twenty-eight different easing animat
 
 This is a ported build, converted from Java to C# for use with the Xamarin MonoFramework.
 
+# Installation
+![NugetIcon](https://raw.githubusercontent.com/DigitalSa1nt/Xama.JTPorts.EasingInterpolator/master/images/nugetIcon.png)
+
+Simply install the nuget package within your Xamarin.Android project and use as described below.
+
+Package Install:
+> Install-Package Xama.JTPorts.EasingInterpolator -Version 1.0.2
+
+.NET CLI:
+>  dotnet add package Xama.JTPorts.EasingInterpolator --version 1.0.2
+
 # Usage
 
 ```cs
